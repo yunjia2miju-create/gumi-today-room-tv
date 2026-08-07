@@ -7,26 +7,27 @@
     "dev": "tsx server.ts",
     "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
     "preview": "vite preview",
+    "start": "node dist/server.cjs",
     "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit",
-    "start": "node dist/server.cjs"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "@google/genai": "^1.29.0",
+    "@google-cloud/storage": "^7.21.0",
+    "@google/genai": "^2.4.0",
+    "@photo-sphere-viewer/core": "^5.15.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
-    "firebase": "^12.13.0",
-    "firebase-admin": "^13.10.0",
-    "lucide-react": "^0.546.0",
+    "firebase": "^12.16.0",
+    "lucide-react": "^1.27.0",
     "motion": "^12.23.24",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
-    "react-markdown": "^10.1.0",
-    "remark-gfm": "^4.0.1",
-    "vite": "^6.2.3",
-    "zustand": "^5.0.13"
+    "react-router-dom": "^7.18.2",
+    "sharp": "^0.35.3",
+    "three": "^0.185.1",
+    "vite": "^6.2.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
